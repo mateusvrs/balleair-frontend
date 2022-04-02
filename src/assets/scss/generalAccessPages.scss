@@ -1,0 +1,102 @@
+@use '../../index';
+
+#register-page, #login-page {
+    background-color: index.$white-background-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 100vh;
+
+    main {
+        flex: 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+
+            max-width: 320px;
+            width: 95%;
+
+            margin-bottom: 5rem;
+            margin-top: 1.5rem;
+
+            p {
+                font-weight: 500;
+                color: #4c4c4c;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+
+                width: 100%;
+
+                font-family: 'Roboto', sans-serif;
+                font-size: 16px;
+                color: index.$brown-base-color;
+
+                div {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                }
+
+                .user-exists {
+                    position: relative;
+            
+                    .default-input {
+                        outline: 1px solid rgb(220, 58, 58);
+                    }
+            
+                    &:before {
+                        position: absolute;
+                        bottom: -15px;
+                        content: "Um usuário com essa informação já existe";
+            
+                        width: 100%;
+            
+                        font-size: 11px;
+                    }
+                }
+            
+                &.error {
+                    position: relative;
+            
+                    .default-input {
+                        outline: 1px solid rgb(220, 58, 58);
+                    }
+            
+                    &:before {
+                        position: absolute;
+                        top: -15px;
+                        content: "Username ou senha incorretos";
+            
+                        width: 100%;
+                        height: 10%;
+            
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #register-page, #login-page {
+        flex-direction: column-reverse;
+
+        main {
+            flex: 4;
+        }
+    }
+}
