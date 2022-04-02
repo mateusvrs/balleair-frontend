@@ -1,0 +1,22 @@
+$white-background-color: hsl(0, 0%, 100%);
+$orange-base-color: hsl(13, 65%, 60%);
+$yellow-base-color: hsl(43, 100%, 67%);
+$brown-base-color: hsl(346, 16%, 16%);
+$blue-base-color: hsl(162, 36%, 76%);
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, #root {
+    height: 100%;
+}
+
+body, #root {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: $white-background-color;
+}
