@@ -1,0 +1,122 @@
+@use  '../../index';
+
+.main-header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    width: 100%;
+    height: 60px;
+
+    .options-container {
+        display: flex;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+
+        width: 100%;
+        height: 100%;
+
+        .options {
+            .links {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+
+                height: 100vh;
+
+                a {
+                    font-size: 25px;
+                    font-weight: 400;
+    
+                    text-decoration: none;
+    
+                    &:link {
+                        color: #121212;
+                    }
+    
+                    &:visited {
+                        color: #121212;
+                    }
+                }
+            }
+
+            flex: 2;
+            background-color: index.$orange-base-color;
+        }
+        
+        .blur {
+            flex: 1;
+            background-color: rgba(33, 33, 33, 0.5);
+        }
+
+        &.close {
+            display: none;
+        }
+    }
+
+    img {
+        width: 60px;
+        height: 60px;
+    }
+
+    background-color: index.$orange-base-color;
+
+    .menu-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        z-index: 3;
+
+        grid-column-start: 3;
+        grid-column-end: 3;
+
+        margin: auto 0;
+        margin-left: auto;
+        margin-right: 20px;
+
+        border: 0;
+        padding: 0;
+
+        width: 20px;
+        height: 16px;
+
+        background-color: index.$orange-base-color;
+        
+        &.open {
+            justify-content: center;
+
+            background-color: index.$orange-base-color;
+
+            .menu-line {
+                transition: transform 0.2s;
+
+                &:first-of-type {
+                    display: none;
+                }
+
+                &:nth-of-type(2n) {
+                    transform: rotate(45deg) translateY(1px);
+                }
+
+                &:nth-of-type(3n) {
+                    transform: rotate(-45deg) translateY(-1px);
+                }
+
+            }
+        }
+
+        .menu-line {
+            border-top: 2px solid index.$brown-base-color;
+            width: inherit;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

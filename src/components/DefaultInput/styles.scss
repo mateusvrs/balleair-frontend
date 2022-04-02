@@ -1,0 +1,49 @@
+@use '../../index';
+
+.default-input {
+    outline: none;
+
+    width: 85%;
+    height: 40px;
+
+    background-color: #fff;
+
+    font-size: 16px;
+    color: index.$brown-base-color;
+
+    padding: 0 15px;
+    border: 1px solid #A8A8B3;
+    border-radius: 8px;
+
+    &:focus {
+        outline: 1px solid index.$orange-base-color;
+    }
+
+    &::-webkit-input-placeholder {
+        color: index.$brown-base-color;
+    }
+
+    &::-moz-placeholder {
+        color: index.$brown-base-color;
+    }
+}
+
+input[type="datetime-local"] {
+    position: relative;
+
+    &:before {
+        content: 'GMT/UTC';
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        right: 0;
+
+        height: 100%;
+
+
+        margin-right: 2.5rem;
+    }
+}

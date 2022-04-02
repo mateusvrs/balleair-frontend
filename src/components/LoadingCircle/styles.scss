@@ -1,0 +1,30 @@
+@use  '../../index';
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+      
+  .loading-circle {
+    height: 5rem;
+    width: 5rem;
+
+    border: 0.4rem solid #fefefe;
+    border-top-color: index.$orange-base-color;
+    border-radius: 50%;
+
+    animation-name: loop;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes loop {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,33 @@
+@use '../../index';
+
+.link-div-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    width: 95%;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: index.$brown-base-color;
+
+    div {
+        border-top: 2px solid index.$brown-base-color;
+
+        width: 14%;
+    }
+
+    a {
+        text-decoration: none;
+        
+        &:link {
+            color: index.$orange-base-color;
+        }
+
+        &:visited {
+            color: index.$orange-base-color;
+        }
+    }
+}

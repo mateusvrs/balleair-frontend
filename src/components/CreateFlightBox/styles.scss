@@ -1,0 +1,55 @@
+.create-flight-container {
+    margin-top: 2rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
+        max-width: 900px;
+        width: 95%;
+
+        .airports-container {
+            display: grid;
+            grid-template-columns: 10fr 1fr 10fr;
+            gap: 0.1rem;
+
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                font-size: 15px;
+            }
+
+            div {
+                font-size: 13px;
+            }
+        }
+
+        input {
+            width: calc(100% - 30px);
+        }
+
+        .aircraft-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+
+        .default-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            width: 100%;
+        }
+    }
+    
+}

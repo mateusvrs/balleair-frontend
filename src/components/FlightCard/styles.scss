@@ -1,0 +1,54 @@
+@use '../../index';
+
+.flight-card-container {
+    display: flex;
+
+    background-color: index.$orange-base-color;
+
+    border-radius: 8px;
+    padding: 5px 8px;
+    width: 90%;
+
+    main {
+        display: flex;
+        flex-direction: column;
+        flex: 8;
+
+        .header-flight-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+    
+            span {
+                font-size: 12px;
+                color: index.$yellow-base-color;
+    
+                margin-bottom: auto;
+            }
+        }
+
+        .body-fligh-card {
+            span {
+                font-size: 13px;
+            }
+        }
+    }
+    
+    aside {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+
+        border-radius: 8px;
+
+        button {
+            border: none;
+            background-color: index.$orange-base-color;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+@use '../../index';
+
+aside {
+    background-color: index.$orange-base-color;
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-size: 35px;
+        font-weight: 600;
+    }
+
+    > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 4.5rem;
+    }
+
+    img {
+        max-width: 325px;
+        max-height: 325px;
+    }
+
+    p {
+        text-align: center;
+        max-width: 500px;
+
+        .slogan {
+            font-size: 25px;
+            color: #2c2c2c;
+            
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    aside {
+        flex: 2;
+
+        div {
+            flex-direction: row;
+            gap: 0.5rem;
+            margin: 0 1rem;
+        }
+
+        img {
+            max-height: 130px;
+            max-width: 130px;
+        }
+
+        p {
+            .slogan {
+                font-size: 15px;
+            }
+        }
+    }
+}

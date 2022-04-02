@@ -1,0 +1,30 @@
+@use  '../../index';
+
+.default-button {
+    padding: 0; 
+    border: 0;
+    border-radius: 8px;
+
+    height: 45px;
+    width: 95%;
+
+    background-color: index.$yellow-base-color;
+
+    transition: filter 0.2s;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: index.$brown-base-color;
+
+    &:hover {
+        cursor: pointer;
+
+        filter: brightness(0.97);
+    }
+
+    &:disabled {
+        background-color: index.$orange-base-color;
+        filter: brightness(0.7);
+    }
+}
