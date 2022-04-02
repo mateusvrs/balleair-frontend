@@ -1,0 +1,112 @@
+@use '../../index';
+
+main {
+    .top-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            text-align: center;
+        }
+    }
+
+    .search-container {
+        margin-top: 2rem;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+
+            max-width: 900px;
+            width: 95%;
+
+            .airports-container {
+                display: grid;
+                grid-template-columns: 10fr 1fr 10fr;
+                gap: 0.1rem;
+
+                span {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    font-size: 15px;
+                }
+
+                div {
+                    font-size: 13px;
+                }
+            }
+
+            input {
+                width: calc(100% - 30px);
+            }
+
+            .default-button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                width: 100%;
+            }
+        }
+        
+    }
+
+    .flights-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+
+        margin-top: 2rem;
+    }
+}
+
+.ReactModal__Overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 3;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        text-align: center;
+
+        background-color: index.$orange-base-color;
+
+        padding: 20px 15px;
+        border-radius: 8px;
+
+        .buttons-container {
+            display: flex;
+            gap: 1rem;
+
+            width: 95%;
+
+            .back {
+                background-color: hsla(0, 0%, 50%, 0.8);
+            }
+
+            .book {
+                background-color: index.$blue-base-color;
+            }
+        }
+    }
+}
