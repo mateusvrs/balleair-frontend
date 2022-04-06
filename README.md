@@ -9,17 +9,17 @@
             <h2>Public Pages</h2>
             <h3>Register Page</h3>
             <p>On this page people can create a user record.</p>
-            <img height="400px" src=".github/register_page.png" alt="register page">
+            <img maxheight="400px" src=".github/register_page.png" alt="register page">
             <h3>Login Page</h3>
             <p>On this page users can login to the site.</p>
-            <img height="400px" src=".github/login_page.png" alt="login page">
+            <img maxheight="400px" src=".github/login_page.png" alt="login page">
             <h2>Private Pages</h2>
             <h3>Home Page</h3>
             <p>On this page travelers can search for flights.</p>
-            <img height="400px" src=".github/home_page.png" alt="home page">
+            <img maxheight="400px" src=".github/home_page.png" alt="home page">
             <h3>Flights Page</h3>
             <p>On this page, travelers can check their reservations and airlines can check their flights.</p>
-            <img height="400px" src=".github/flights_page.png" alt="flights page">
+            <img maxheight="400px" src=".github/flights_page.png" alt="flights page">
         </div>
     </div>
     <br>
